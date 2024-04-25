@@ -11,7 +11,7 @@ import Contact from '../components/Contact';
 import Testiminails from '../components/Testiminails';
 import Layout from '../layouts/Layout';
 import TypingAnimation from '../components/TypingAnimation';
-// import ParticlesBackground from '../ParticlesBackground';
+import ParticlesBackground from '../ParticlesBackground';
 
 function Home() {
     const [activeLink, setActiveLink] = useState('home');
@@ -78,7 +78,7 @@ function Home() {
                     style={{ backgroundImage: `url(${filteredAbout.avatar.url})` }}
                 >
                     <div id="particles-box" className="particles-box">
-                        {/* <ParticlesBackground /> */}
+                        <ParticlesBackground />
                     </div>
                     <div className="container">
                         <div className="row full-screen align-items-center p-100px-tb">
