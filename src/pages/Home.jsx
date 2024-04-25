@@ -11,6 +11,7 @@ import Contact from '../components/Contact';
 import Testiminails from '../components/Testiminails';
 import Layout from '../layouts/Layout';
 import TypingAnimation from '../components/TypingAnimation';
+// import ParticlesBackground from '../ParticlesBackground';
 
 function Home() {
     const [activeLink, setActiveLink] = useState('home');
@@ -69,31 +70,40 @@ function Home() {
 
     return (
         <>
-            <Layout headerColor={'dark'} about={filteredAbout}>
+            <Layout about={filteredAbout}>
                 {/* Home Banner */}
-                <section id="home" className="home-banner-01">
+                <section
+                    id="home"
+                    className="home-banner-02 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: `url(${filteredAbout.avatar.url})` }}
+                >
+                    <div id="particles-box" className="particles-box">
+                        {/* <ParticlesBackground /> */}
+                    </div>
                     <div className="container">
                         <div className="row full-screen align-items-center p-100px-tb">
-                            <div className="col-md-6">
-                                <div className="ht-text">
-                                    <h6>Hello there...</h6>
-                                    <h1>{filteredAbout.name}</h1>
-                                    <h2>
-                                        I Am Passionate <TypingAnimation about={filteredAbout} />
-                                    </h2>
-                                    <p>{filteredAbout.description}</p>
-                                    <div className="btn-bar go-to">
-                                        <Link className="m-btn m-btn-theme" to="work">
-                                            my work
-                                        </Link>
-                                        <Link className="m-btn m-btn-t-theme" to="contactus">
-                                            Hire Me
-                                        </Link>
+                            <div className="col-12">
+                                <div className="ht-text text-center">
+                                    <h6>Hello There!</h6>
+                                    <h1>I'm {filteredAbout.name}</h1>
+                                    <div className="nav social-icons justify-content-center">
+                                        <a href="#">
+                                            <i className="fab fa-facebook-f" />
+                                        </a>
+                                        <a href="#">
+                                            <i className="fab fa-twitter" />
+                                        </a>
+                                        <a href="#">
+                                            <i className="fab fa-instagram" />
+                                        </a>
+                                        <a href="#">
+                                            <i className="fab fa-linkedin-in" />
+                                        </a>
+                                        <a href="#">
+                                            <i className="fab fa-pinterest" />
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-md-6">
-                                <img src={filteredAbout.avatar.url} alt="image" />
                             </div>
                         </div>
                     </div>
