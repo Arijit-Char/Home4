@@ -87,16 +87,16 @@ function Home() {
                                     <h6>Hello There!</h6>
                                     <h1>I'm {filteredAbout.name}</h1>
                                     <div className="nav social-icons justify-content-center">
-                                        <a href="#">
+                                        <a href={filteredSocialHandles[3].url}>
                                             <i className="fab fa-facebook-f" />
                                         </a>
-                                        <a href="#">
+                                        <a href={filteredSocialHandles[2].url}>
                                             <i className="fab fa-twitter" />
                                         </a>
-                                        <a href="#">
+                                        <a href={filteredSocialHandles[0].url}>
                                             <i className="fab fa-instagram" />
                                         </a>
-                                        <a href="#">
+                                        <a href={filteredSocialHandles[1].url}>
                                             <i className="fab fa-linkedin-in" />
                                         </a>
                                         <a href="#">
