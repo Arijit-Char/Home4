@@ -70,7 +70,7 @@ function Home() {
 
     return (
         <>
-            <Layout about={filteredAbout}>
+            <Layout about={filteredAbout} social={filteredSocialHandles}>
                 {/* Home Banner */}
                 <section
                     id="home"
@@ -99,9 +99,7 @@ function Home() {
                                         <a href={filteredSocialHandles[1].url}>
                                             <i className="fab fa-linkedin-in" />
                                         </a>
-                                        <a href="#">
-                                            <i className="fab fa-pinterest" />
-                                        </a>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -119,16 +117,16 @@ function Home() {
                 <About about={filteredAbout} social={filteredSocialHandles} />
                 {/* end about us */}
                 {/* fun */}
-                <Skills skills={sortedFilteredSkills} />
+                <Skills skills={sortedFilteredSkills} about={filteredAbout} />
                 {/* End fun */}
                 {/* resume */}
-                <Services services={filteredServices} />
+                <Services services={filteredServices} about={filteredAbout} />
                 {/* End resume */}
                 {/* Work */}
                 <Work work={sortedFilteredProject} about={filteredAbout} />
                 {/* End work */}
                 {/* Testimonials */}
-                <Testiminails testimonials={filteredTestimonials} />
+                <Testiminails testimonials={filteredTestimonials} about={filteredAbout} />
 
                 {/* End Testimonials */}
                 {/* Blog */}
