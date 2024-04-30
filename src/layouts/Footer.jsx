@@ -4,7 +4,7 @@ const Footer = ({ social }) => {
           <div className="container">
               <div className="row align-items-center">
                   <div className="col-md-6 m-10px-tb">
-                      <div className="nav justify-content-center justify-content-md-start" style={{ paddingLeft: '6rem' }}>
+                      <div className="nav justify-content-center justify-content-md-start" style={{ paddingLeft: '1rem' }}>
                           <a href={social[3].url}>
                               <i className="fab fa-facebook-f" />{' '}
                           </a>
